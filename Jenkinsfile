@@ -1,4 +1,4 @@
-ansiColor('xterm') {
+
     node {
         stage('Checkout') {
             // Clean the workspace
@@ -23,4 +23,4 @@ ansiColor('xterm') {
             archiveArtifacts 'manifest.json'
         }
     }
-}
+
