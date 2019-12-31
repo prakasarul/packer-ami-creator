@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - role: nginxinc.nginx
+  post_tasks:
+    - name: Upload website files
+      copy: src=../files/website/ dest=/usr/share/nginx/html/ mode=0644
+

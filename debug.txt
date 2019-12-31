@@ -1,0 +1,161 @@
+2019/12/31 11:48:36 [INFO] Packer version: 1.5.1 [go1.13.5 linux amd64]
+2019/12/31 11:48:36 Attempting to open config file: /root/.packerconfig
+2019/12/31 11:48:36 [WARN] Config file doesn't exist: /root/.packerconfig
+2019/12/31 11:48:36 Setting cache directory: /root/packer_ami/packer_cache
+2019/12/31 11:48:36 Plugin could not be found at /usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs (exec: "/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs": stat /usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs: no such file or directory). Checking same directory as executable.
+2019/12/31 11:48:36 Current exe path: /usr/local/bin/packer
+2019/12/31 11:48:36 Creating plugin client for path: /usr/local/bin/packer
+2019/12/31 11:48:36 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-builder-amazon-ebs"}
+2019/12/31 11:48:36 Waiting for RPC address for: /usr/local/bin/packer
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: [INFO] Packer version: 1.5.1 [go1.13.5 linux amd64]
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: Attempting to open config file: /root/.packerconfig
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: Setting cache directory: /root/packer_ami/packer_cache
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: args: []string{"packer-builder-amazon-ebs"}
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: Plugin address: unix /tmp/packer-plugin803242358
+2019/12/31 11:48:36 Received unix RPC address for /usr/local/bin/packer: addr is /tmp/packer-plugin803242358
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: Waiting for connection...
+2019/12/31 11:48:36 packer-builder-amazon-ebs plugin: Serving a plugin connection...
+2019/12/31 11:48:36 Plugin could not be found at /usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible (exec: "/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible": stat /usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible: no such file or directory). Checking same directory as executable.
+2019/12/31 11:48:36 Current exe path: /usr/local/bin/packer
+2019/12/31 11:48:36 Creating plugin client for path: /usr/local/bin/packer
+2019/12/31 11:48:36 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-ansible"}
+2019/12/31 11:48:36 Waiting for RPC address for: /usr/local/bin/packer
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: [INFO] Packer version: 1.5.1 [go1.13.5 linux amd64]
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: Attempting to open config file: /root/.packerconfig
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: Setting cache directory: /root/packer_ami/packer_cache
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: args: []string{"packer-provisioner-ansible"}
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: Plugin address: unix /tmp/packer-plugin189521822
+2019/12/31 11:48:36 Received unix RPC address for /usr/local/bin/packer: addr is /tmp/packer-plugin189521822
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: Waiting for connection...
+2019/12/31 11:48:36 packer-provisioner-ansible plugin: Serving a plugin connection...
+Debug mode enabled. Builds will not be parallelized.
+[1;32mamazon-ebs: output will be in this color.[0m
+
+2019/12/31 11:48:36 Build debug mode: true
+2019/12/31 11:48:36 Force build: false
+2019/12/31 11:48:36 On error: 
+2019/12/31 11:48:36 Preparing build: amazon-ebs
+2019/12/31 11:48:37 Debug enabled, so waiting for build to finish: amazon-ebs
+2019/12/31 11:48:37 Starting build run: amazon-ebs
+2019/12/31 11:48:37 Running builder: amazon-ebs
+2019/12/31 11:48:37 [INFO] (telemetry) Starting builder amazon-ebs
+2019/12/31 11:48:37 packer-provisioner-ansible plugin: ansible-playbook version: 2.9.2
+2019/12/31 11:48:37 packer-builder-amazon-ebs plugin: Found region ap-south-1
+2019/12/31 11:48:37 packer-builder-amazon-ebs plugin: [INFO] AWS Auth provider used: "StaticProvider"
+2019/12/31 11:48:37 packer-builder-amazon-ebs plugin: [INFO] (aws): No AWS timeout and polling overrides have been set. Packer will default to waiter-specific delays and timeouts. If you would like to customize the length of time between retries and max number of retries you may do so by setting the environment variables AWS_POLL_DELAY_SECONDS and AWS_MAX_ATTEMPTS to your desired values.
+[1;32m==> amazon-ebs: Prevalidating any provided VPC information[0m
+[1;32m==> amazon-ebs: Prevalidating AMI Name: packer-rhel7 1577792916[0m
+[1;32m==> amazon-ebs: Pausing after run of step 'StepPreValidate'. Press enter to continue.[0m 2019/12/31 11:48:38 packer-builder-amazon-ebs plugin: Using AMI Filters {
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:   Filters: [{
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:       Name: "virtualization-type",
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:       Values: ["hvm"]
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:     },{
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:       Name: "root-device-type",
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:       Values: ["ebs"]
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:     },{
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:       Name: "name",
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:       Values: ["RHEL-7.7_HVM-*"]
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:     }],
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin:   Owners: ["309956199498"]
+2019/12/31 11:48:38 packer-builder-amazon-ebs plugin: }
+[0;32m    amazon-ebs: Found Image ID: ami-0ec8900bf6d32e0a8[0m
+[1;32m==> amazon-ebs: Pausing after run of step 'StepSourceAMIInfo'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing after run of step 'StepNetworkInfo'. Press enter to continue.[0m [1;32m==> amazon-ebs: Creating temporary keypair: packer_5e0b3594-9fb3-c27d-e1e5-842126599782[0m
+[0;32m    amazon-ebs: Saving key for debug purposes: ec2_amazon-ebs.pem[0m
+[1;32m==> amazon-ebs: Pausing after run of step 'StepKeyPair'. Press enter to continue.[0m [1;32m==> amazon-ebs: Creating temporary security group for this instance: packer_5e0b3598-e3bd-34dd-ea13-7387596b2ffe[0m
+2019/12/31 11:48:40 packer-builder-amazon-ebs plugin: [DEBUG] Waiting for temporary security group: sg-05beaf300f1df708a
+2019/12/31 11:48:40 packer-builder-amazon-ebs plugin: [DEBUG] Found security group sg-05beaf300f1df708a
+[1;32m==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...[0m
+[1;32m==> amazon-ebs: Pausing after run of step 'StepSecurityGroup'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing after run of step 'StepIamInstanceProfile'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing after run of step 'StepCleanupVolumes'. Press enter to continue.[0m [1;32m==> amazon-ebs: Launching a source AWS instance...[0m
+[1;32m==> amazon-ebs: Adding tags to source instance[0m
+[0;32m    amazon-ebs: Adding tag: "Name": "Packer Builder"[0m
+[0;32m    amazon-ebs: Instance ID: i-056c033883951f9ec[0m
+[1;32m==> amazon-ebs: Waiting for instance (i-056c033883951f9ec) to become ready...[0m
+[0;32m    amazon-ebs: Public DNS: ec2-52-66-77-200.ap-south-1.compute.amazonaws.com[0m
+[0;32m    amazon-ebs: Public IP: 52.66.77.200[0m
+[0;32m    amazon-ebs: Private IP: 172.31.41.238[0m
+2019/12/31 11:49:14 packer-builder-amazon-ebs plugin: [INFO] Not using winrm communicator, skipping get password...
+[1;32m==> amazon-ebs: Pausing after run of step 'StepRunSourceInstance'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing after run of step 'StepGetPassword'. Press enter to continue.[0m [1;32m==> amazon-ebs: Using ssh communicator to connect: 52.66.77.200[0m
+2019/12/31 11:49:14 packer-builder-amazon-ebs plugin: [INFO] Waiting for SSH, up to timeout: 5m0s
+[1;32m==> amazon-ebs: Waiting for SSH to become available...[0m
+2019/12/31 11:49:14 packer-builder-amazon-ebs plugin: Using ssh_host value: 52.66.77.200
+2019/12/31 11:49:15 packer-builder-amazon-ebs plugin: [DEBUG] TCP connection to SSH ip/port failed: dial tcp 52.66.77.200:22: connect: connection refused
+2019/12/31 11:49:20 packer-builder-amazon-ebs plugin: Using ssh_host value: 52.66.77.200
+2019/12/31 11:49:20 packer-builder-amazon-ebs plugin: [INFO] Attempting SSH connection to 52.66.77.200:22...
+2019/12/31 11:49:20 packer-builder-amazon-ebs plugin: [DEBUG] reconnecting to TCP connection for SSH
+2019/12/31 11:49:20 packer-builder-amazon-ebs plugin: [DEBUG] handshaking with SSH
+2019/12/31 11:49:20 packer-builder-amazon-ebs plugin: [DEBUG] handshake complete!
+2019/12/31 11:49:20 packer-builder-amazon-ebs plugin: [INFO] no local agent socket, will not connect agent
+[1;32m==> amazon-ebs: Connected to SSH![0m
+[1;32m==> amazon-ebs: Pausing after run of step 'StepConnect'. Press enter to continue.[0m 2019/12/31 11:49:35 packer-builder-amazon-ebs plugin: Running the provision hook
+2019/12/31 11:49:35 [INFO] (telemetry) Starting provisioner ansible
+[1;32m==> amazon-ebs: Pausing before the next provisioner . Press enter to continue.[0m [1;32m==> amazon-ebs: Provisioning with Ansible...[0m
+[1;32m==> amazon-ebs: Executing Ansible: *****a*****n*****s*****i*****b*****l*****e*****-*****p*****l*****a*****y*****b*****o*****o*****k***** *****-*****-*****e*****x*****t*****r*****a*****-*****v*****a*****r*****s***** *****p*****a*****c*****k*****e*****r*****_*****b*****u*****i*****l*****d*****_*****n*****a*****m*****e*****=*****a*****m*****a*****z*****o*****n*****-*****e*****b*****s***** *****p*****a*****c*****k*****e*****r*****_*****b*****u*****i*****l*****d*****e*****r*****_*****t*****y*****p*****e*****=*****a*****m*****a*****z*****o*****n*****-*****e*****b*****s***** *****-*****o***** *****I*****d*****e*****n*****t*****i*****t*****i*****e*****s*****O*****n*****l*****y*****=*****y*****e*****s***** *****-*****i***** *****/*****t*****m*****p*****/*****p*****a*****c*****k*****e*****r*****-*****p*****r*****o*****v*****i*****s*****i*****o*****n*****e*****r*****-*****a*****n*****s*****i*****b*****l*****e*****4*****9*****2*****0*****1*****5*****7*****4*****4***** *****/*****r*****o*****o*****t*****/*****p*****a*****c*****k*****e*****r*****_*****a*****m*****i*****/*****n*****g*****i*****n*****x*****.*****y*****m*****l***** *****-*****e***** *****a*****n*****s*****i*****b*****l*****e*****_*****s*****s*****h*****_*****p*****r*****i*****v*****a*****t*****e*****_*****k*****e*****y*****_*****f*****i*****l*****e*****=*****/*****t*****m*****p*****/*****a*****n*****s*****i*****b*****l*****e*****-*****k*****e*****y*****7*****7*****1*****7*****4*****4*****8*****6*****9***** *****-*****-*****v*****e*****r*****b*****o*****s*****e*****[0m
+2019/12/31 11:49:37 packer-provisioner-ansible plugin: SSH proxy: serving on 127.0.0.1:43855
+[0;32m    amazon-ebs: Using /etc/ansible/ansible.cfg as config file[0m
+[0;32m    amazon-ebs:[0m
+[0;32m    amazon-ebs: PLAY [all] *********************************************************************[0m
+[0;32m    amazon-ebs:[0m
+[0;32m    amazon-ebs: TASK [Gathering Facts] *********************************************************[0m
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: SSH proxy: accepted connection
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: authentication attempt from 127.0.0.1:47238 to 127.0.0.1:43855 as root using none
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: authentication attempt from 127.0.0.1:47238 to 127.0.0.1:43855 as root using publickey
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: new env request: LANG=C.UTF-8
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: new exec request: /bin/sh -c 'echo ~root && sleep 0'
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [DEBUG] Opening new ssh session
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [DEBUG] starting remote command: /bin/sh -c 'echo ~root && sleep 0'
+2019/12/31 11:49:38 [INFO] 6 bytes written for 'stdout'
+2019/12/31 11:49:38 [INFO] 0 bytes written for 'stderr'
+2019/12/31 11:49:38 [INFO] RPC client: Communicator ended with: 0
+2019/12/31 11:49:38 [INFO] RPC endpoint: Communicator ended with: 0
+2019/12/31 11:49:38 [INFO] 0 bytes written for 'stdin'
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] 6 bytes written for 'stdout'
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] 0 bytes written for 'stderr'
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] RPC client: Communicator ended with: 0
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] 0 bytes written for 'stdin'
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: new env request: LANG=C.UTF-8
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: new exec request: /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `" && echo ansible-tmp-1577792978.38-242389942141844="` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `" ) && sleep 0'
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [DEBUG] Opening new ssh session
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [DEBUG] starting remote command: /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `" && echo ansible-tmp-1577792978.38-242389942141844="` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `" ) && sleep 0'
+2019/12/31 11:49:38 [INFO] 0 bytes written for 'stdout'
+2019/12/31 11:49:38 [INFO] 62 bytes written for 'stderr'
+2019/12/31 11:49:38 [INFO] RPC client: Communicator ended with: 1
+2019/12/31 11:49:38 [INFO] RPC endpoint: Communicator ended with: 1
+2019/12/31 11:49:38 [INFO] 0 bytes written for 'stdin'
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [ERROR] Remote command exited with '1': /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `" && echo ansible-tmp-1577792978.38-242389942141844="` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `" ) && sleep 0'
+2019/12/31 11:49:38 packer-builder-amazon-ebs plugin: [INFO] RPC endpoint: Communicator ended with: 1
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] 0 bytes written for 'stdout'
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] 62 bytes written for 'stderr'
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] RPC client: Communicator ended with: 1
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: [INFO] 0 bytes written for 'stdin'
+[0;32m    amazon-ebs: fatal: [default]: UNREACHABLE! => {"changed": false, "msg": "Authentication or permission failure. In some cases, you may have been able to authenticate and did not have permissions on the target directory. Consider changing the remote tmp path in ansible.cfg to a path rooted in \"/tmp\". Failed command was: ( umask 77 && mkdir -p \"` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `\" && echo ansible-tmp-1577792978.38-242389942141844=\"` echo /root/.ansible/tmp/ansible-tmp-1577792978.38-242389942141844 `\" ), exited with result 1", "unreachable": true}[0m
+[0;32m    amazon-ebs:[0m
+[0;32m    amazon-ebs: PLAY RECAP *********************************************************************[0m
+[0;32m    amazon-ebs: default                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0[0m
+[0;32m    amazon-ebs:[0m
+2019/12/31 11:49:38 [INFO] (telemetry) ending ansible
+2019/12/31 11:49:38 packer-provisioner-ansible plugin: shutting down the SSH proxy
+[1;32m==> amazon-ebs: Provisioning step had errors: Running the cleanup provisioner, if present...[0m
+[1;32m==> amazon-ebs: Pausing before cleanup of step 'StepConnect'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing before cleanup of step 'StepGetPassword'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing before cleanup of step 'StepRunSourceInstance'. Press enter to continue.[0m [1;32m==> amazon-ebs: Terminating the source AWS instance...[0m
+[1;32m==> amazon-ebs: Pausing before cleanup of step 'StepCleanupVolumes'. Press enter to continue.[0m [1;32m==> amazon-ebs: Cleaning up any extra volumes...[0m
+[1;32m==> amazon-ebs: No volumes to clean up, skipping[0m
+[1;32m==> amazon-ebs: Pausing before cleanup of step 'StepIamInstanceProfile'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing before cleanup of step 'StepSecurityGroup'. Press enter to continue.[0m [1;32m==> amazon-ebs: Deleting temporary security group...[0m
+[1;32m==> amazon-ebs: Pausing before cleanup of step 'StepKeyPair'. Press enter to continue.[0m [1;32m==> amazon-ebs: Deleting temporary keypair...[0m
+[1;32m==> amazon-ebs: Pausing before cleanup of step 'StepNetworkInfo'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing before cleanup of step 'StepSourceAMIInfo'. Press enter to continue.[0m [1;32m==> amazon-ebs: Pausing before cleanup of step 'StepPreValidate'. Press enter to continue.[0m [1;31mBuild 'amazon-ebs' errored: Error executing Ansible: Non-zero exit status: exit status 4[0m
+
+==> Some builds didn't complete successfully and had errors:
+--> amazon-ebs: Error executing Ansible: Non-zero exit status: exit status 4
+
+==> Builds finished but no artifacts were created.
+2019/12/31 11:58:31 [INFO] (telemetry) ending amazon-ebs
+2019/12/31 11:58:31 Waiting on builds to complete...
+2019/12/31 11:58:31 machine readable: error-count []string{"1"}
+==> Some builds didn't complete successfully and had errors:
+2019/12/31 11:58:31 machine readable: amazon-ebs,error []string{"Error executing Ansible: Non-zero exit status: exit status 4"}
+==> Builds finished but no artifacts were created.
+2019/12/31 11:58:31 [INFO] (telemetry) Finalizing.
+2019/12/31 11:58:32 waiting for all plugin processes to complete...
+2019/12/31 11:58:32 /usr/local/bin/packer: plugin process exited
+2019/12/31 11:58:32 /usr/local/bin/packer: plugin process exited

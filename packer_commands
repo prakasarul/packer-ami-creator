@@ -1,0 +1,11 @@
+#To get images from Redhat
+aws ec2 describe-images --owners 309956199498 --filters "Name=is-public,Values=true" "Name=name,Values=RHEL-7.7*" --region ap-south-1 --output text
+
+#Packer cli
+
+packer build rhel.json
+
+packer build -var "aws_access_key=key" -var "aws_secret_key=key" rhel1.json
+
+
+packer build -var-file variables.json rhel1.json

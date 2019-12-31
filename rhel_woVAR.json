@@ -1,0 +1,19 @@
+{
+	
+	 "builders": [{
+    "type": "amazon-ebs",
+    "region": "ap-south-1",
+    "source_ami_filter": {
+    "filters": {
+       "virtualization-type": "hvm",
+       "root-device-type" : "ebs",
+       "name" : "RHEL-7.7_HVM-*"
+    },
+    "owners": ["309956199498"],
+    "most_recent" :true
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "packer-rhel7 {{timestamp}}"
+  }]
+}

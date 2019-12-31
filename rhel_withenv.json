@@ -1,0 +1,26 @@
+
+{
+  "variables": {
+    "aws_access_key": "{{env `AWS_ACCESS_KEY`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}"
+  },
+	 "builders": [{
+    "type": "amazon-ebs",
+    "region": "ap-south-1",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "source_ami_filter": {
+    "filters": {
+       "virtualization-type": "hvm",
+       "root-device-type" : "ebs",
+       "name" : "RHEL-7.7_HVM-*"
+    },
+    "owners": ["309956199498"],
+    "most_recent" :true
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "packer-rhel7 {{timestamp}}"
+  }]
+}
+
