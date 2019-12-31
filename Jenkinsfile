@@ -6,7 +6,10 @@
             // Get some code from a GitHub repository
             checkout scm
         }
-        
+        stage('Setup') {
+            sh "ansible-galaxy install -r requirements_serverhard.yml"
+        }
+
         stage('Validate') {
             sh "packer validate rhel_hard_ansi_manifestout.json"
         }
